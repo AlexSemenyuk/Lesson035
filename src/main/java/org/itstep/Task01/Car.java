@@ -66,7 +66,5 @@ public class Car {
                 '}';
     }
 
-    public void printCollection (){
 
-    }
 }
