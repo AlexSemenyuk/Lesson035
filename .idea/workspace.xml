@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1a58550-44de-442e-8231-e49f9036c644" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/itstep/Task02/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/itstep/Task02/Task02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/itstep/Task01/Task01Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/itstep/Task02/Task02Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/itstep/Task01/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/itstep/Task01/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/itstep/Task01/Task01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/itstep/Task01/Task01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/itstep/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/itstep/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/itstep/Task01/Task01.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/itstep/Task01/Task01.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -33,21 +39,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "E:/JAVA/Projects/GitHub Homeworks/Lesson035"
   }
-}</component>
-  <component name="RunManager">
-    <configuration name="Task01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.itstep.Task01.Task01" />
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.itstep.Task01" />
+      <recent name="org.itstep.Task02" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Task02">
+    <configuration name="Task02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.itstep.Task02.Task02" />
       <module name="Lesson035" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.itstep.Task01.*" />
+          <option name="PATTERN" value="org.itstep.Task02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -55,9 +73,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Task01Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lesson035" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.itstep.Task01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.itstep.Task01" />
+      <option name="MAIN_CLASS_NAME" value="org.itstep.Task01.Task01Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Task01Test.carsBySortedPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lesson035" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.itstep.Task01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.itstep.Task01" />
+      <option name="MAIN_CLASS_NAME" value="org.itstep.Task01.Task01Test" />
+      <option name="METHOD_NAME" value="carsBySortedPrice" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Task01Test.carsBySortedPriceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lesson035" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.itstep.Task01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.itstep.Task01" />
+      <option name="MAIN_CLASS_NAME" value="org.itstep.Task01.Task01Test" />
+      <option name="METHOD_NAME" value="carsBySortedPriceTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Task02Test.maxXText" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lesson035" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.itstep.Task02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.itstep.Task02" />
+      <option name="MAIN_CLASS_NAME" value="org.itstep.Task02.Task02Test" />
+      <option name="METHOD_NAME" value="maxXText" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Task01" />
+        <item itemvalue="Application.Task02" />
+        <item itemvalue="JUnit.Task02Test.maxXText" />
+        <item itemvalue="JUnit.Task01Test" />
+        <item itemvalue="JUnit.Task01Test.carsBySortedPriceTest" />
+        <item itemvalue="JUnit.Task01Test.carsBySortedPrice" />
       </list>
     </recent_temporary>
   </component>
@@ -72,6 +157,7 @@
       <workItem from="1668611924549" duration="2434000" />
       <workItem from="1668671202990" duration="1940000" />
       <workItem from="1668687570724" duration="240000" />
+      <workItem from="1668689472517" duration="20031000" />
     </task>
     <servers />
   </component>
