@@ -3,6 +3,7 @@ package org.itstep.Task02;
 
 import java.util.*;
 import java.util.List;
+import java.util.Map.Entry;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -12,7 +13,7 @@ import static java.util.stream.Collectors.*;
 public class Task02 {
     final static Scanner scanner = new Scanner(System.in);
     final static Scanner scanner1 = new Scanner(System.in);
-    final static Random rnd = new Random();
+    final static Random rnd = new Random(150);
 
     public static void main(String[] args) {
         Collection<Point<Integer, Integer>> points = asList(
@@ -44,13 +45,13 @@ public class Task02 {
                     printPointWithDistance(map);
                     break;
                 case 3:
-                    Collection<Point<Integer, Integer>> newPoints = createCollection();
+                    System.out.print("Input quality of points >>> ");
+                    final int number = scanner.nextInt();
+                    Collection<Point<Integer, Integer>> newPoints = createCollection(number);
                     printPoint(newPoints);
                     break;
                 case 4:
-                    map = null;
-                    map = sortByDistanceToStart(points);
-                    printPointWithDistance(map);
+                    sortByDistanceToStart(points);
                     break;
                 case 9:
                     printPoint(points);
@@ -85,11 +86,10 @@ public class Task02 {
 
     public static Map<Double, Point<Integer, Integer>> distanceToStart(Collection<Point<Integer, Integer>> points) {
         double[] arrDistance = points.stream()
-                .mapToDouble(Task02::distanceToStart)
+                .mapToDouble(Task02::calculationDistanceToStart)
                 .toArray();
         int[] index = {-1};
         Map<Double, Point<Integer, Integer>> map = points.stream()
-//                .boxed()			// Переводит примитивный Stream в generic Stream
                 .collect(Collectors.toMap(item -> arrDistance[++index[0]], item -> item));
         return map;
 
@@ -110,30 +110,30 @@ public class Task02 {
     }
 
 
-    public static Collection<Point<Integer, Integer>> createCollection() {
-        final int max = 500;
-        System.out.print("Input quality of points >>> ");
-        final int number = scanner.nextInt();
-        List rezult = Stream.generate(() -> new Point(rnd.nextInt(max + 1), rnd.nextInt(max + 1)))
-                .filter(p -> distanceToStart(p) > 5)
+    public static Collection<Point<Integer, Integer>> createCollection(final int number) {
+        List rezult = Stream.generate(() -> new Point(rnd.nextInt(number + 11), rnd.nextInt(number + 11)))
+                .filter(p -> calculationDistanceToStart(p) > 5)
                 .limit(number)
                 .collect(toList());
         System.out.println("-New collection --------------------------------------------------------------");
         return rezult;
     }
 
-    public static double distanceToStart(Point<Integer, Integer> p) {
+
+    public static double calculationDistanceToStart(Point<Integer, Integer> p) {
         double rezult = Math.ceil(Math.sqrt(p.getX() * p.getX() + p.getY() * p.getY()));
         return rezult;
     }
 
-    public static Map<Double, Point<Integer, Integer>> sortByDistanceToStart(Collection<Point<Integer, Integer>> points) {
+    public static String [] sortByDistanceToStart(Collection<Point<Integer, Integer>> points) {
         System.out.println("-Sort existing collection to down--------------------------------------------------------------");
-        Map<Double, Point<Integer, Integer>> map = distanceToStart(points)
+        String[] rezult = {""};
+                distanceToStart(points)
                 .entrySet()
                 .stream()
                 .sorted((x1, x2) -> x2.getKey().compareTo(x1.getKey()))
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-        return map;
+                .forEach(x -> rezult[0] += x.getKey() + " : " + x.getValue() + "\n");
+        System.out.println(Arrays.toString(rezult));
+        return rezult;
     }
 }

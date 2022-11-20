@@ -94,24 +94,24 @@ public class Task01 {
 
     public static Collection<Car> carsAbovePrice(Collection<Car> cars, int price) {
         System.out.println("All cars with price above " + price + "----------------------------------------------");
-        Collection <Car> rezult = cars.stream()
+        Collection<Car> rezult = cars.stream()
                 .filter(x -> price < x.getPrice())
                 .collect(Collectors.toList());
         return rezult;
     }
 
-    public static Collection<Car> carsByTimeRange(Collection<Car> cars, int [] years) {
+    public static Collection<Car> carsByTimeRange(Collection<Car> cars, int[] years) {
         System.out.println("All cars with makeYear between " + years[0] + " and " + years[1] + "------------");
-        Collection <Car> rezult = cars.stream()
+        Collection<Car> rezult = cars.stream()
                 .filter(x -> years[0] <= x.getMakeYear())
                 .filter(x -> years[1] >= x.getMakeYear())
                 .collect(Collectors.toList());
         return rezult;
     }
 
-    public static Collection<Car>  carsBySortedPrice(Collection<Car> cars) {
+    public static Collection<Car> carsBySortedPrice(Collection<Car> cars) {
         System.out.println("All cars with reverse sort by price -------------------------------------");
-        Collection <Car> rezult = cars.stream()
+        Collection<Car> rezult = cars.stream()
                 .sorted(Comparator.comparing(Car::getPrice).reversed())
                 .collect(Collectors.toList());
         return rezult;
